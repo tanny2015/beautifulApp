@@ -68,6 +68,11 @@ class XMFindAppDetailCenterView: UIScrollView, UIScrollViewDelegate {
         contentY = CGRectGetMaxY(appIconView.frame) + UI_MARGIN_5 + 30
 // MARK : 设置动态的view ------------ 很多view需要手动创建
         let margin : CGFloat = 10
+        
+        
+        
+        //////////////////////////////////////////***************///////////////////////////////////
+     //#warning 注意这个contentLabel是用来承装详情content的。他的model就是XMFindAppModel中的一个小属性appDescription
         self.contentLabel.frame = CGRectMake(margin, contentY + UI_MARGIN_10, SCREEN_WIDTH-2*margin, 20)
     // 详情文字
         // 计算高度
@@ -100,6 +105,8 @@ class XMFindAppDetailCenterView: UIScrollView, UIScrollViewDelegate {
             self.centerView.addSubview(imgView)
             contentY += size.height + margin
         }
+        
+        
         
     // 美过的美友
         if dataModel.up_users.count != 0 {

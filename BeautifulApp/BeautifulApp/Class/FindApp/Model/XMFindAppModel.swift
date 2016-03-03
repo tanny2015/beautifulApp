@@ -8,6 +8,7 @@
 
 import UIKit
 
+//这个model包括了详情页详细数据和所有评论数据在内的所有数据结构
 class XMFindAppModel: NSObject {
     // app 名
     var title : String?

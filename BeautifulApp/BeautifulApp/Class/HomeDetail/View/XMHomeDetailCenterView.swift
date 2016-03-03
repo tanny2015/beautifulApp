@@ -82,10 +82,28 @@ class XMHomeDetailCenterView: UIScrollView {
         self.contentSize = CGSizeMake(0, contentY)
     }
     
+    //contentModel类型解析
+    /*
+    enum XMLContentType {
+    case XMLContentTypeP
+    case XMLContentTypeH2
+    case XMLContentTypeA
+    case XMLContentTypeImg
+    case XMLContentTypeUnknow
+    }
+    
+    class XMLContentModel: NSObject {
+    var contentType : XMLContentType!
+    var content : String!
+    }
+    */
+    
+    
+    
     //MARK:- private Methods
     private func setupOtherData() {
         // 计算文字高度，添加app描述文段
-        let describeLabel = self.createPTitleLabel()
+        let describeLabel = self.createPTitleLabel()// 描述【这是是YYLabel】
         self.centerView.addSubview(describeLabel)
         let descriSize = self.calculateTextHeight(model.digest!, label: describeLabel)
         describeLabel.frame = CGRect(x: UI_MARGIN_10, y: contentY + UI_MARGIN_10, width: SCREEN_WIDTH-2*UI_MARGIN_10, height: descriSize.height)
@@ -104,7 +122,8 @@ class XMHomeDetailCenterView: UIScrollView {
                     self.centerView.addSubview(h2TitlLabel)
                     self.contentY += h2TitlLabel.height + UI_MARGIN_10
                 } else if contentModel.contentType == XMLContentType.XMLContentTypeP {
-                    // 描述
+
+                    // 描述【这是是YYLabel】
                     let pTitleLabel = self.createPTitleLabel()
                     pTitleLabel.frame = CGRect(x: UI_MARGIN_10, y: self.contentY, width: SCREEN_WIDTH-2*UI_MARGIN_10, height: 20)
                     let pTitleSize = self.calculateTextHeight(contentModel.content, label: pTitleLabel)

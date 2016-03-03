@@ -27,6 +27,7 @@ class XMFindAppDetailController: UIViewController,UIScrollViewDelegate, XMFindAp
         
         // 返回按钮
         self.view.addSubview(returnBtn)
+        
         // 屏幕适配
         self.setLayout()
         

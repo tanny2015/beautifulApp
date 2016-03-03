@@ -8,6 +8,7 @@
 
 import UIKit
 
+//这边数据取得不是很完整，只取了返回来的其中一部分数据而已
 class XMHomeDataModel: NSObject {
     
     var id : String?

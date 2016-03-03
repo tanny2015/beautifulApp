@@ -14,7 +14,7 @@ class XMHomeDetailController: UIViewController, XMHomeDetailCenterViewDelegate,U
     private var model : XMHomeDataModel!
     // 评论page
     private var page : Int = 1
-    
+    //这个是真正的详情页拉！
     convenience init(model : XMHomeDataModel){
         self.init()
         self.model = model
